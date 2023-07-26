@@ -1,7 +1,7 @@
-import './current-weather.css';
+import './CurrentWeather.css';
 
 const currentWeather = () => {
-  return <p>currentWeather</p>;
+  return <p>Current Weather</p>;
 };
 
 export default currentWeather;
