@@ -1,8 +1,7 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
 import { AsyncPaginate } from 'react-select-async-paginate';
-import { GEO_API_URL, geoApiOptions } from '../api';
+import { geoApiOptions, GEO_API_URL } from '../api';
 
-// eslint-disable-next-line react/prop-types
 const Search = ({ onSearchChange }) => {
   const [search, setSearch] = useState(null);
 
@@ -21,8 +20,7 @@ const Search = ({ onSearchChange }) => {
             };
           }),
         };
-      })
-      .catch((err) => console.log(err));
+      });
   };
 
   const handleOnChange = (searchData) => {
