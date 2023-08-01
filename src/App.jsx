@@ -1,9 +1,11 @@
-import './App.css';
+import { useState } from 'react';
+import { WEATHER_API_URL, WEATHER_API_KEY } from './components/api';
+
 import Search from './components/Search/Search';
 import CurrentWeather from './components/CurrentWeather/CurrentWeather';
-import { WEATHER_API_URL, WEATHER_API_KEY } from './components/api';
-import { useState } from 'react';
 import Forecast from './components/Forecast/Forecast';
+
+import './App.css';
 
 function App() {
   const [currentWeather, setCurrentWeather] = useState(null);
@@ -27,13 +29,8 @@ function App() {
         setCurrentWeather({ city: searchData.label, ...weatherResponse });
         setForecast({ city: searchData.label, ...forecastResponse });
       })
-      .catch((err) => {
-        console.log(err);
-      });
+      .catch(console.log);
   };
-
-  console.log(currentWeather);
-  console.log(forecast);
 
   return (
     <div className='container'>

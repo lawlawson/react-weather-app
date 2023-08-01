@@ -34,10 +34,6 @@ const currentWeather = ({ data }) => {
             <span className='parameter-label'>Humidity</span>
             <span className='parameter-value'>{data.main.humidity}%</span>
           </div>
-          {/* <div className='parameter-row'>
-            <span className='parameter-label'>Pressure</span>
-            <span className='parameter-value'>15 hPa</span>
-          </div> */}
         </div>
       </div>
     </div>
